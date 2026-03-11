@@ -1,0 +1,13 @@
+receptor = clean_6dk1_receptor.pdbqt
+ligand = ligand_DONEPEZIL.pdbqt
+
+center_x = 10.292
+center_y = 38.510
+center_z = -34.484
+
+size_x = 25
+size_y = 25
+size_z = 25
+
+exhaustiveness = 8
+num_modes = 9

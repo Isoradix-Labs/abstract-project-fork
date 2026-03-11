@@ -1,0 +1,73 @@
+==============================================================================================================
+  SIGMA-1 RECEPTOR DRUG REPURPOSING — MOLECULAR DOCKING RESULTS
+  Target  : Human Sigma-1 Receptor (SIGMAR1 / CHEMBL287 / PDB: 6DK1)
+  Method  : AutoDock Vina 1.2.0  |  Grid: 25×25×25 Å  |  Exhaustiveness: 8
+  Center  : X=10.292  Y=38.510  Z=-34.484 (from crystallographic pentazocine)
+==============================================================================================================
+
+  TABLE 1 — DOCKING SCORES AND BINDING AFFINITY COMPARISON
+--------------------------------------------------------------------------------------------------------------
+  Rank   Drug                   ChEMBL             Mode 1     Mode 2     Mode 3       vs Reference Consistency   
+--------------------------------------------------------------------------------------------------------------
+  REF    Pentazocine            CHEMBL60542        -8.823     -8.685     -8.550  0.000 (reference) Very High     
+  1      Raloxifene             CHEMBL81          -10.630     -9.913     -9.616  -1.807 (stronger) High          
+  2      Donepezil              CHEMBL502         -10.500    -10.010     -9.995  -1.677 (stronger) Very High     
+  3      Dextromethorphan       CHEMBL52440       -10.100     -8.491     -8.354  -1.277 (stronger) Moderate      
+  4      Fluvoxamine            CHEMBL814          -7.291     -7.277     -7.246    +1.532 (weaker) Very High     
+--------------------------------------------------------------------------------------------------------------
+  * All scores in kcal/mol. More negative = stronger predicted binding.
+  * Consistency = spread between Mode 1 and Mode 2 scores.
+
+  TABLE 2 — BINDING AFFINITY ESTIMATES AND POTENCY CLASSIFICATION
+--------------------------------------------------------------------------------------------------------------
+  Drug                    Docking Score   Est. Ki (nM) Potency Class            Exp. Ki (nM)
+--------------------------------------------------------------------------------------------------------------
+  Pentazocine                    -8.823         336.82 Sub-micromolar                    2.0
+  Raloxifene                    -10.630          15.91 Double-digit nM         Not confirmed
+  Donepezil                     -10.500          19.82 Double-digit nM                  14.6
+  Dextromethorphan              -10.100          38.96 Double-digit nM                 142.0
+  Fluvoxamine                    -7.291        4480.04 Micromolar                       36.0
+--------------------------------------------------------------------------------------------------------------
+  * Est. Ki calculated using ΔG = RT·ln(Ki) at T=298 K (RT=0.592 kcal/mol).
+  * Estimated Ki is theoretical — use for comparison only, not as measured values.
+
+  TABLE 3 — ALL VINA BINDING MODES (kcal/mol) — Complete Output
+--------------------------------------------------------------------------------------------------------------
+  Drug                         M1       M2       M3       M4       M5       M6       M7       M8       M9
+--------------------------------------------------------------------------------------------------------------
+  Pentazocine              -8.823   -8.685   -8.550   -8.519   -8.166   -7.919   -7.847   -7.658   -7.427
+  Raloxifene              -10.630   -9.913   -9.616   -9.567   -9.077   -8.932   -8.363   -8.276   -8.274
+  Donepezil               -10.500  -10.010   -9.995   -9.900   -9.823   -9.694   -9.679   -9.384   -9.032
+  Dextromethorphan        -10.100   -8.491   -8.354   -8.324   -8.235   -7.898   -7.349   -7.225   -7.163
+  Fluvoxamine              -7.291   -7.277   -7.246   -7.062   -7.059   -7.046   -6.953   -6.798   -6.778
+--------------------------------------------------------------------------------------------------------------
+
+  TABLE 4 — CANDIDATE SELECTION AND LITERATURE SUPPORT
+--------------------------------------------------------------------------------------------------------------
+  Drug                   Source               Drug Type                      Key Evidence
+--------------------------------------------------------------------------------------------------------------
+  Pentazocine            Crystal Standard     Opioid / Sigma agonist         Schmidt et al., 2016, Nature
+  Raloxifene             Pipeline Derived     SERM (Estrogen modulator)      pChEMBL 6.71, 3 assays
+  Donepezil              Knowledge Guided     AChE inhibitor (Alzheimer's)   Meunier et al., 2006, Br. J. Pharmacol.
+  Dextromethorphan       Knowledge Guided     Antitussive / NMDA antagonist  Nguyen et al., 2014, Trends Pharmacol. Sci.
+  Fluvoxamine            Knowledge Guided     SSRI / Sigma-1R agonist        Hashimoto et al., 2009, Biol. Psychiatry
+--------------------------------------------------------------------------------------------------------------
+
+  RESULT SUMMARY
+--------------------------------------------------------------------------------------------------------------
+  Total candidates docked    : 4
+  Exceeded pentazocine       : 3 of 4 candidates
+  Best binder                : Raloxifene (-10.630 kcal/mol)
+  Most consistent pose       : Donepezil (Mode1-Mode2 diff = 0.490)
+  Most consistent (all modes): Fluvoxamine (diff = 0.014)
+  Reference standard score   : Pentazocine -8.823 kcal/mol
+
+  CITATIONS (required)
+--------------------------------------------------------------------------------------------------------------
+  [1] Eberhardt et al. AutoDock Vina 1.2.0. J. Chem. Inf. Model. 2021.
+      DOI: 10.1021/acs.jcim.1c00203
+  [2] Trott & Olson. AutoDock Vina. J. Comp. Chem. 2010.
+      DOI: 10.1002/jcc.21334
+  [3] Mendez et al. ChEMBL. Nucleic Acids Res. 2019.
+  [4] Hayashi & Su. Sigma-1R crystal structure. Cell 2007.
+==============================================================================================================
