@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Isoradix Labs: Comprehensive Interaction Data</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 30px; background-color: #f4f7f6; color: #333; }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #2980b9; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.1); font-size: 0.95em; }
+        th, td { border: 1px solid #e0e0e0; padding: 15px; text-align: left; vertical-align: middle; }
+        th { background-color: #2c3e50; color: white; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+        td img { width: 300px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .drug-name { font-size: 1.2em; font-weight: bold; color: #2980b9; }
+        .score { color: #c0392b; font-weight: bold; }
+        .bond-title { font-weight: bold; color: #16a085; font-size: 0.9em; text-transform: uppercase; margin-top: 8px; display: block;}
+        ul { margin: 5px 0 15px 20px; padding: 0; font-size: 0.9em; }
+        li { margin-bottom: 3px; }
+    </style>
+</head>
+<body>
+
+    <h1>Isoradix Labs: Sig-1R PLIP Interaction Master Table</h1>
+
+    <table>
+        <tr>
+            <th style="width: 15%;">Candidate & Affinity</th>
+            <th style="width: 30%;">Specific PLIP Residue Interactions</th>
+            <th style="width: 30%;">2D Interaction Map</th>
+            <th style="width: 25%;">Pharmacological Verdict</th>
+        </tr>
+
+        <tr>
+            <td>
+                <span class="drug-name">Pentazocine</span><br><br>
+                <span class="score">-8.823 kcal/mol</span><br>
+                <span style="color: #7f8c8d; font-size: 0.85em;">(Native Control)</span>
+            </td>
+            <td>
+                <span class="bond-title">Electrostatic (Salt Bridge / H-Bond):</span>
+                <ul><li>Glu172, Asp126</li></ul>
+                <span class="bond-title">Hydrophobic Contacts:</span>
+                <ul><li>Val84, Met93, Tyr120, Ile124, Trp164</li></ul>
+            </td>
+            <td><img src="pentazocine plip image.png" alt="Pentazocine PLIP"></td>
+            <td>The benchmark interaction profile. Validates the native pharmacophore, anchored strictly by Glu172 and Asp126 with standard hydrophobic packing.</td>
+        </tr>
+
+        <tr>
+            <td>
+                <span class="drug-name">Donepezil</span><br><br>
+                <span class="score">-10.5 kcal/mol</span><br>
+                <span style="color: #7f8c8d; font-size: 0.85em;">(Premier Match)</span>
+            </td>
+            <td>
+                <span class="bond-title">Salt Bridge:</span>
+                <ul><li>Glu172</li></ul>
+                <span class="bond-title">Hydrophobic Contacts:</span>
+                <ul><li>Trp89, Met93, Tyr120, Ile124, Trp164</li></ul>
+                <span class="bond-title">&pi;-Stacking:</span>
+                <ul><li>Tyr120, Trp164</li></ul>
+            </td>
+            <td><img src="donepezil plip image.png" alt="Donepezil PLIP"></td>
+            <td>Demonstrates a flawless target profile. The amine perfectly anchors to Glu172, while the bulky rings are locked in place by double &pi;-stacking.</td>
+        </tr>
+
+        <tr>
+            <td>
+                <span class="drug-name">Raloxifene</span><br><br>
+                <span class="score">-10.63 kcal/mol</span><br>
+                <span style="color: #7f8c8d; font-size: 0.85em;">(Lead Scaffold)</span>
+            </td>
+            <td>
+                <span class="bond-title">Hydrogen Bonds (1):</span>
+                <ul><li>Glu172 (via phenol -OH)</li></ul>
+                <span class="bond-title">Hydrophobic Contacts (11):</span>
+                <ul><li>Val84, Trp89, Met93, Leu105, Tyr120, Ile124, Val162, Trp164...</li></ul>
+                <span class="bond-title">&pi;-Stacking (2):</span>
+                <ul><li>Tyr120, Trp164</li></ul>
+            </td>
+            <td><img src="raloxifene plip image.png" alt="Raloxifene PLIP"></td>
+            <td>The highest thermodynamic affinity due to massive hydrophobic surface area. However, relies on estrogenic hydroxyls that trigger P-gp efflux. Prime candidate for bioisosteric optimization.</td>
+        </tr>
+
+        <tr>
+            <td>
+                <span class="drug-name">Dextromethorphan</span><br><br>
+                <span class="score">-10.1 kcal/mol</span><br>
+                <span style="color: #7f8c8d; font-size: 0.85em;">(Hydrophobic Slip)</span>
+            </td>
+            <td>
+                <span class="bond-title">Hydrogen Bonds / Salt Bridges (0):</span>
+                <ul><li>None</li></ul>
+                <span class="bond-title">Hydrophobic Contacts (8):</span>
+                <ul><li>Leu105, Tyr120, Ile124, Val162, Trp164...</li></ul>
+                <span class="bond-title">&pi;-Stacking (1):</span>
+                <ul><li>Tyr120</li></ul>
+            </td>
+            <td><img src="dextrometorphan plip image.png" alt="Dextromethorphan PLIP"></td>
+            <td>High Vina score driven entirely by shape complementarity and grease. The failure to form polar anchors with Glu172 suggests orientational instability.</td>
+        </tr>
+
+        <tr>
+            <td>
+                <span class="drug-name">Fluvoxamine</span><br><br>
+                <span class="score">-7.291 kcal/mol</span><br>
+                <span style="color: #7f8c8d; font-size: 0.85em;">(Flexible Failure)</span>
+            </td>
+            <td>
+                <span class="bond-title">Hydrogen Bonds (2):</span>
+                <ul><li>Glu172</li></ul>
+                <span class="bond-title">Hydrophobic Contacts:</span>
+                <ul><li>Sparse / Minimal</li></ul>
+            </td>
+            <td><img src="fluvoxamine plip imge.png" alt="Fluvoxamine PLIP"></td>
+            <td>Proves that hitting the Glu172 target is insufficient without hydrophobic support. The aliphatic chain is too flexible to lock into the pocket.</td>
+        </tr>
+    </table>
+
+</body>
+</html>
